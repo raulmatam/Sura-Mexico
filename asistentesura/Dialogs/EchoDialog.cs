@@ -35,7 +35,7 @@ namespace Microsoft.Bot.Sample.SimpleEchoBot
                 HttpClient client = new HttpClient();
                 HttpResponseMessage response;
                 AdaptiveCard card = new AdaptiveCard();
-                response = await client.GetAsync(String.Format("https://asistentesura9ad0.blob.core.windows.net/assetsbotsura/mainMenuCard.json"));
+                response = await client.GetAsync(String.Format("https://chatbotsura.blob.core.windows.net/cardstemplates/mainMenuCard.json"));
                 var json = await response.Content.ReadAsStringAsync();
                 AdaptiveCardParseResult resultString = AdaptiveCard.FromJson(json);
                 card = resultString.Card;
